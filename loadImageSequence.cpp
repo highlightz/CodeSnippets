@@ -13,13 +13,18 @@ void drawCurrentHeading( cv::Mat& bkground );
 
 int main( int argc, char** argv )
 {
+   // In Linux, this is a right way of string assignment,
+   // when in Windows, adjust it to be right.
    string dir = "/home/highlight/Projects/laserOA/build-laserOA-unknown-Debug/dateset150814";
    for ( int i = 100; i < 2000; i++ )
    {
        try{
+       // Prepare file name
        char base_name[256]; sprintf( base_name, "%d.jpg", i );
        string image_name = dir + "/L_" + base_name;
+       
        Mat raw = imread( image_name );
+       
        // Prepare data
        Point pt1( 320, 420 );
        Point pt2( 280, 460 );
@@ -34,7 +39,6 @@ int main( int argc, char** argv )
        }
        catch( ... )
        {
-
        }
    }
 
