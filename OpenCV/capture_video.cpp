@@ -1,8 +1,10 @@
-#include <stdio.h>
+#include <cstdio>
 #include <string>
-using std::string;
+using namespace std;
+
 #include <opencv2/opencv.hpp>
 using namespace cv;
+
 int main(int argc, char** argv )
 {
 	VideoCapture cap;
